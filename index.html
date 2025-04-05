@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <title>Stefan & Nevena</title>
 
     <style>
       @keyframes shake {
@@ -45,7 +45,6 @@
         --envelope-tab: #37736b;
         --envelope-cover: #336c65;
         --shadow-color: rgba(0, 0, 0, 0.2);
-
         --heart-color: rgb(252, 8, 231);
       }
 
@@ -70,9 +69,8 @@
         background: var(--bg-envelope-color);
         box-shadow: 0 0 40px var(--shadow-color);
         position: relative;
-        width: 250px; /* Reduced size */
-        height: 150px; /* Reduced size */
-  
+        width: 400px; /* Increased size */
+        height: 220px; /* Increased size */
       }
 
       .envelope-wrapper > .envelope {
@@ -86,9 +84,9 @@
         position: absolute;
         top: 0;
         z-index: 2;
-        border-top: 100px solid var(--envelope-tab); /* Reduced size */
-        border-right: 125px solid transparent;
-        border-left: 125px solid transparent;
+        border-top: 150px solid var(--envelope-tab); /* Increased size */
+        border-right: 200px solid transparent;
+        border-left: 200px solid transparent;
         transform-origin: top;
         transition: all 0.5s ease-in-out 0.7s;
       }
@@ -99,17 +97,17 @@
         z-index: 2;
         width: 0;
         height: 0;
-        border-top: 100px solid transparent;
-        border-right: 125px solid var(--envelope-cover);
-        border-bottom: 50px solid var(--envelope-cover);
-        border-left: 125px solid var(--envelope-cover);
+        border-top: 150px solid transparent;
+        border-right: 200px solid var(--envelope-cover);
+        border-bottom: 75px solid var(--envelope-cover);
+        border-left: 200px solid var(--envelope-cover);
       }
 
       .envelope > .letter {
         position: absolute;
-       left: 70px;
+        left: 110px; /* Adjusted for larger envelope */
         bottom: 0;
-       /* // width: 50%; */
+        width: 45%;
         height: 100%;
         text-align: center;
         transition: all 1s ease-in-out;
@@ -120,9 +118,9 @@
       .heart {
         position: absolute;
         top: 50%;
-        left: 45%;
-        width: 40px; /* Reduced size */
-        height: 40px; /* Reduced size */
+        left: 43%;
+        width: 60px; /* Increased size */
+        height: 60px; /* Increased size */
         background-color: transparent;
         z-index: 4;
         animation: flap 1.5s ease-in-out infinite alternate;
@@ -134,17 +132,17 @@
       .heart:after {
         content: "";
         position: absolute;
-        width: 10px; /* Reduced size */
-        height: 10px; /* Reduced size */
+        width: 15px; /* Increased size */
+        height: 15px; /* Increased size */
         border-radius: 50%;
       }
 
       .heart:before {
-        top: -5px;
+        top: -7.5px;
       }
 
       .heart:after {
-        right: 5px;
+        right: 7.5px;
       }
 
       .flap {
@@ -157,7 +155,7 @@
       }
 
       .flap > .envelope > .letter {
-        bottom: 50px; /* Adjusted for smaller envelope */
+        bottom: 70px; /* Adjusted for larger envelope */
         transform: scale(1.5);
         transition-delay: 1s;
         z-index: 5;
@@ -177,8 +175,7 @@
         <div class="envelope">
           <img class="letter" src="./image.jpg" alt="Letter" />
         </div>
-
-        <img class="heart" src="./stamp.svg" alt="Letter" />
+        <img class="heart" src="./stamp.svg" alt="Heart" />
       </div>
     </div>
 
